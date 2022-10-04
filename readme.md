@@ -122,7 +122,7 @@ function removeFirstOccurence(list: string[], item: string) {
 jest('Should remove first occurence from a list', async () => {
   const list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'd'];
   const item = 'd';
-  const newList = utils.removeFirstOccurence(list, item);
+  const newList = removeFirstOccurence(list, item);
   expect(item).toOccur(1).in(newList);
 });
 ```
