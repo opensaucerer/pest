@@ -16,7 +16,7 @@ Running the above in the root directory will execute the tests in the `test` dir
 
 You can contribute by either trying out the package, implementing a fix, or adding a new feature.
 
-Read the [contribution guide](https://github.com/opensaucerer/jest/blob/main/Contributing.md) for more information
+Read the [contribution guide](https://github.com/opensaucerer/jest/blob/main/contributing.md) for more information
 
 ## Usage
 
