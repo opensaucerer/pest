@@ -14,27 +14,9 @@ Running the above in the root directory will execute the tests in the `test` dir
 
 ## Contributing
 
-Open an issue or create a pull request.
-To create a pull request first create a fork and then clone the forked repository. For example...
+You can contribute by either trying out the package, implementing a fix, or adding a new feature.
 
-```bash
-git clone https://github.com/opensaucerer/jest.git
-```
-
-Modify the code and include tests for your changes then open a pull requests against the `main` branch. Please make sure that all tests pass before opening a pull request.
-
-## Milestones
-
-- [x] Implement basic test runner functionality
-- [x] Implement basic assertion functionalities
-- [x] Add support for `beforeAll` and `afterAll` hooks
-- [x] Allow asynchronous tests
-- [ ] Add support for `beforeEach` and `afterEach` hooks
-- [ ] Add support for `describe` blocks
-- [ ] Add support for `it` blocks
-- [ ] Allow for more complex assertions
-- [ ] Implement a CLI command for running tests
-- [ ] Compile code into an npm package
+Read the [contribution guide](https://github.com/opensaucerer/jest/blob/main/Contributing.md) for more information
 
 ## Usage
 
