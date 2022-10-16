@@ -21,7 +21,7 @@ But first, to create a pull request you need to create a fork of the main branch
 For example, here's how you clone this repository...
 
 ```bash
-git clone https://github.com/opensaucerer/jest.git
+git clone https://github.com/opensaucerer/pest.git
 ```
 
 Then checkout to a new branch with a name to describe the feature or fix you intend to make. For example
