@@ -1,12 +1,12 @@
 // `tests` is a singleton variable that will contain all our tests
 export let tests: { name: string; fn: Function }[] = [];
 
-// `afterJest` and `beforeJests` are singleton variables that will contain all setup and clean up functions
-export let afterJests: Function[] = [];
-export let beforeJests: Function[] = [];
+// `afterPest` and `beforePests` are singleton variables that will contain all setup and clean up functions
+export let afterPests: Function[] = [];
+export let beforePests: Function[] = [];
 
 // expose the test function as a global variable
-global.jest = function (name: string, fn: Function) {
+global.pest = function (name: string, fn: Function) {
   // it pushes the name and function as an object to
   // the `tests` array
   tests.push({ name, fn });
@@ -74,10 +74,10 @@ global.expect = function (actual: any) {
   };
 };
 
-global.afterJest = function (fn: Function) {
-  afterJests.push(fn);
+global.afterPest = function (fn: Function) {
+  afterPests.push(fn);
 };
 
-global.beforeJest = function (fn: Function) {
-  beforeJests.push(fn);
+global.beforePest = function (fn: Function) {
+  beforePests.push(fn);
 };

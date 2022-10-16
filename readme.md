@@ -1,4 +1,4 @@
-# Jest
+# Pest
 
 An implementation of a testing framework for Typescript applications.
 
@@ -16,7 +16,7 @@ Running the above in the root directory will execute the tests in the `test` dir
 
 You can contribute by either trying out the package, implementing a fix, or adding a new feature.
 
-Read the [contribution guide](https://github.com/opensaucerer/jest/blob/main/contributing.md) for more information
+Read the [contribution guide](https://github.com/opensaucerer/pest/blob/main/contributing.md) for more information
 
 ## Usage
 
@@ -40,7 +40,7 @@ function parsePathVariables(
   return pathVariablesObject;
 }
 
-jest('Should parse path variables', async () => {
+pest('Should parse path variables', async () => {
   const path = '/test/1234567890';
   const route = '/test/:id';
   const params = parsePathVariables(path, route);
@@ -66,7 +66,7 @@ function loadEnv(path?: string) {
   });
 }
 
-beforeJest(() => {
+beforePest(() => {
   // create a .env file and write some data
   fs.writeFileSync(
     '.env.test',
@@ -74,7 +74,7 @@ beforeJest(() => {
   );
 });
 
-jest('Should load env into process', async () => {
+pest('Should load env into process', async () => {
   // load the .env file
   loadEnv('.env.test');
 
@@ -84,7 +84,7 @@ jest('Should load env into process', async () => {
   expect(process.env.DUMMY_KEY_2).toBe('0987654321');
 });
 
-afterJest(() => {
+afterPest(() => {
   // delete the .env file
   fs.unlinkSync('.env.test');
 });
@@ -101,7 +101,7 @@ function removeFirstOccurence(list: string[], item: string) {
   return list;
 }
 
-jest('Should remove first occurence from a list', async () => {
+pest('Should remove first occurence from a list', async () => {
   const list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'd'];
   const item = 'd';
   const newList = removeFirstOccurence(list, item);
@@ -128,7 +128,7 @@ function makeRequest(options: { url: string }) {
   });
 }
 
-jest('Should make an api call', async () => {
+pest('Should make an api call', async () => {
   const data = await makeRequest({
     url: 'http://abbrefy.xyz/api/v1/me/links/',
   });

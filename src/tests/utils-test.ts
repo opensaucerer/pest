@@ -1,7 +1,7 @@
 import '../mock';
 import * as utils from './utils';
 
-jest('Should pasre query parameters in path', async () => {
+pest('Should pasre query parameters in path', async () => {
   const path = '/test?name=abc&age=20';
   const params = utils.parseURL(path);
   expect(params.query).toBeObject({
@@ -10,13 +10,13 @@ jest('Should pasre query parameters in path', async () => {
   });
 });
 
-jest('Should pasre query parameters in path with no query', async () => {
+pest('Should pasre query parameters in path with no query', async () => {
   const path = '/test';
   const params = utils.parseURL(path);
   expect(params.query).toBeObject({});
 });
 
-jest('Should parse path variables', async () => {
+pest('Should parse path variables', async () => {
   const path = '/test/1234567890';
   const route = '/test/:id';
   const params = utils.parsePathVariables(path, route);
@@ -25,7 +25,7 @@ jest('Should parse path variables', async () => {
   });
 });
 
-jest('Should remove first occurence from a list', async () => {
+pest('Should remove first occurence from a list', async () => {
   const list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'd'];
   const item = 'd';
   const newList = utils.removeFirstOccurence(list, item);

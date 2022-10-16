@@ -1,23 +1,23 @@
 {
-  "name": "jest",
+  "name": "pest",
   "version": "1.0.0",
   "description": "An implementation of a testing framework for Typescript applications.",
   "main": "index.js",
   "scripts": {
-    "test": "npm run build && node ./dist/jest.js",
+    "test": "npm run build && node ./dist/pest.js",
     "build": "tsc -p ."
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/opensaucerer/jest"
+    "url": "https://github.com/opensaucerer/pest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/opensaucerer/jest/issues"
+    "url": "https://github.com/opensaucerer/pest/issues"
   },
-  "homepage": "https://github.com/opensaucerer/jest#readme",
+  "homepage": "https://github.com/opensaucerer/pest#readme",
   "devDependencies": {
     "@types/node": "^18.8.1"
   }

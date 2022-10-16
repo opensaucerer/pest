@@ -10,7 +10,7 @@ declare global {
     }
   }
   var env: NodeJS.ProcessEnv;
-  var jest: (name: string, fn: Function) => void;
+  var pest: (name: string, fn: Function) => void;
   var expect: (actual: any) => {
     toBe: (expected: any) => void;
     toNotBe: (expected: any) => void;
@@ -22,8 +22,8 @@ declare global {
     toBeObject: (expected: any) => void;
     toBeOfType: (expected: any) => void;
   };
-  var afterJest: (fn: any) => void;
-  var beforeJest: (fn: any) => void;
+  var afterPest: (fn: any) => void;
+  var beforePest: (fn: any) => void;
 }
 
 declare module 'http' {

@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { afterJests, beforeJests, tests } from './mock';
+import { afterPests, beforePests, tests } from './mock';
 let passed = 0;
 
 function run() {
@@ -9,8 +9,8 @@ function run() {
     }
 
     // run set ups
-    for (let i = 0; i < beforeJests.length; i++) {
-      await beforeJests[i]();
+    for (let i = 0; i < beforePests.length; i++) {
+      await beforePests[i]();
     }
 
     // run tests
@@ -28,8 +28,8 @@ function run() {
     }
 
     // run clean ups
-    for (let i = 0; i < afterJests.length; i++) {
-      await afterJests[i]();
+    for (let i = 0; i < afterPests.length; i++) {
+      await afterPests[i]();
     }
 
     resolve(1);

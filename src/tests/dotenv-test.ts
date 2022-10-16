@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import '../mock';
 import * as http from 'http';
 
-beforeJest(() => {
+beforePest(() => {
   // create a .env file and write some data
   fs.writeFileSync(
     '.env.test',
@@ -11,7 +11,7 @@ beforeJest(() => {
   );
 });
 
-jest('Should load env into process', async () => {
+pest('Should load env into process', async () => {
   // load the .env file
   loadEnv('.env.test');
 
@@ -21,7 +21,7 @@ jest('Should load env into process', async () => {
   expect(process.env.DUMMY_KEY_2).toBe('0987654321');
 });
 
-jest('Should make an api call', async () => {
+pest('Should make an api call', async () => {
   const data = await makeRequest({
     url: 'http://abbrefy.xyz/api/v1/me/links/',
   });
@@ -44,7 +44,7 @@ function makeRequest(options: { url: string }) {
   });
 }
 
-afterJest(() => {
+afterPest(() => {
   // delete the .env file
   fs.unlinkSync('.env.test');
 });
